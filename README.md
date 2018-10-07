@@ -4,7 +4,7 @@
 * We will develop a single-page application using React featuring a map of your neighborhood or a neighborhood we would like to visit. We will then add additional functionality to this application, including: map markers to identify popular locations or places you’d like to visit, a search function to easily discover these locations, and a list view to support simple browsing of all locations. 
 * We will then research and implement third-party APIs that provide additional information about each of these locations (such as Foursquare API).
 
-* This project shows the IT companies located in Infocity, Bhubaneswar, India.
+* This project shows the Neighborhood Places of Infocity, Bhubaneswar, India.
 
 ## Instructions to Run the App
 
@@ -20,7 +20,7 @@
 4. Press `CTRL + C` to stop the Server.
 
 ### Offline First
-- The service worker is only enabled in the production environment. It's recommended that you do not enable an offline-first service worker in a development environment.
+- The service worker is enabled in this project.
 
 ## Technology
 - ReactJs

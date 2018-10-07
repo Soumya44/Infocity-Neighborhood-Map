@@ -1,180 +1,203 @@
-* {
-  box-sizing: border-box;
+header {
+    text-align: center;
+    color: white;
+    background-color: black;
+    height: 80px;
 }
 
-.offscreen {
-  position: absolute;
-  clip: rect(1px 1px 1px 1px);
-  clip: rect(1px, 1px, 1px, 1px);
-  padding: 0;
-  border: 0;
-  height: 1px;
-  width: 1px;
-  overflow: hidden;
+#page-header {
+    margin: auto;
+    margin-left: 15px;
+    text-align: left;
+    letter-spacing: 2pt;
+    padding-top: 25px;
 }
 
-.site-name {
-  margin: 0;
+#menu {
+    display: none;
 }
 
-.map-container {
-  top: 89px;
+#filter {
+    height: 25pt;
+    display: flex;
+    flex-wrap: wrap;
 }
 
-.navbar {
-  text-align: center;
-  top: 0;
-    position: fixed;
-    right: 0;
-    left: 0;
-    z-index: 1030;
-    min-height: 50px;
-    margin-bottom: 20px;
-    display: block;
-    background-color: gainsboro;
+#filter-text {
+    width: calc(72% - 10px);
+    padding: 5px;
 }
 
-.navbar-header {
-  padding-right: 15px;
-  padding-left: 15px;
-  margin-right: auto;
-  margin-left: auto;
+#filter-help {
+    font-size: 10pt;
+    padding: 7px 9px;
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+    background-color: midnightblue;
+    cursor: pointer;
 }
 
-.site-name {
-  padding-top: 11px;
-  font-size: 1.5em;
-  color: black;
+/*
+#filter-text:focus,#filter-text:hover {
+  outline: 0;
+  color: white;
+  background-color: #454545;
+    
+}
+*/
+
+#placelistview {
+    margin: 0px;
+    width: 242px;
+    background-color: black;
 }
 
-.navbar-form {
-  margin-top: 0px;
-  padding: 8px 15px;
+ul#places-list {
+    overflow: scroll;
+    margin: 0px;
+    height: 100vh;
+    padding-left: 0px;
 }
 
-.form-control {
-  display: block;
-  width: 95%;
-  padding: 6px 10px;
-  font-size: 14px;
-  line-height: 1.42857143;
-  color: #555;
-  background-color: #fff;
-  background-image: none;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
-  box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
-  -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
-  -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
-  transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+ul#places-list li {
+    list-style: none;
+    padding: 0.5em;
+    margin: 0.2em;
+    font-size: 10pt;
+    line-height: 2;
+    text-align: left;
+    color: #cccccc;
+    background-color: black;
 }
 
-.main-container {
-  bottom: 0px;
-  height: 100%;
-  left: 0px;
-  position: absolute;
-  right: 0px;
+ul#places-list li:focus,
+#places-list li:hover {
+    outline: 0;
+    color: white;
+    background-color: #454545;
+    cursor: pointer;
+
 }
 
-.close-list-box-btn {
-  cursor: pointer;
-  float: right;
-  color: #e45e5e;
-  border-style: solid;
-  border-width: 1px;
-  padding: 10px 10px;
+#map {
+    bottom: 0px;
+    top: 80px;
+    height: 100%;
+    left: 244px;
+    position: absolute;
+    right: 0px;
 }
 
-.list-box {
-  background: #101010;
-  color: #fff;
-  border: 1px solid #999;
-  border-radius: 3px;
-  top: 87px;
-  height: calc(100% - 50px);
-  padding: 15px 24px 30px 10px;
-  text-align: left;
-  width: 199px;
-  z-index: 10;
-  position: absolute;
-  -webkit-transform: translate(-300px, 0);
-  transform: translate(-300px, 0);
-  transition: transform 0.3s ease;
-  overflow-y: scroll;
+#map-help {
+    text-align: center;
+    font-size: 8pt;
 }
 
-.list-box.open {
-  -webkit-transform: translate(0px, 0);
-  transform: translate(0px, 0);
+#map-error {
+    text-align: center;
+    margin-top: 30vh;
 }
 
-#list-of-places {
-  list-style: none;
-  padding-left: 10px;
+#map-error em,
+#map-error a {
+    color: red;
+    font-size: 8pt;
 }
 
-#list-of-places li {
-  padding: 10px 0;
-  border-bottom: 1px #e45e5e dotted;
-  cursor: pointer;
+.infowindow {
+    max-width: 40vw;
+    max-height: 40vh;
+    color: black;
 }
 
-.list-box-content {
-  width: 80%;
-  margin-top: 35px;
+.infowindow h2 {
+    margin: 0;
 }
 
-.infowindow-content {
-  width: 100%;
-  max-width: 225px;
+.infowindow p {
+    color: black;
+    margin: 10px;
 }
 
-.error-msg {
-  margin-top: 130px;
-  width: 90%;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 20px;
-  background-color: orange;
-  color: #fff;
-  border-radius: 10px;
-  box-shadow: 1px 1px 1px #555;
+.infowindow ul {
+    margin: 10px;
+    padding-left: 10px;
 }
 
-@media screen and (min-width: 475px) {
-  .map-container {
-    top: 50px;
-  }
-
-  .site-name {
-    float: left;
-    padding-right: 15px;
-  }
-
-  .form-group {
-    float: left;
-  }
-
-  .form-control {
-    width: 100%;
-    padding: 6px 12px;
-  }
-
-  .list-box {
-    top: 49px;
-  }
-
-  .infowindow-content {
-    padding: 0 10px;
-    max-width: 430px;
-  }
+.infowindow-item {
+    padding-bottom: 0.2em;
 }
 
-@media screen and (min-width: 968px) {
-  .infowindow-content {
-    max-width: 800px;
-    padding: 0 15px;
-  }
+.infowindow-item a {
+    font-size: 10pt;
+    text-decoration: underline;
+    color: #0045bb;
+}
+
+/* The Close Button */
+
+.close {
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    outline: 0;
+    color: black;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 550px) {
+    .listview {
+        z-index: 10;
+        width: 242px;
+        position: absolute;
+        background-color: black;
+        visibility: hidden;
+        /* This trasform moves the drawer off canvas. */
+        -webkit-transform: translate(-250px, 0);
+        transform: translate(-250px, 0);
+        /* Optionally, we animate the drawer. */
+        -webkit-transition: -webkit-transform 0.3s ease;
+        transition: -webkit-transform 0.3s ease;
+        transition: transform 0.3s ease;
+        transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+    }
+    .listview.open {
+        visibility: visible;
+        -webkit-transform: translate(0, 0);
+        transform: translate(0, 0);
+        -webkit-box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.5);
+        box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.5);
+    }
+    #map {
+        top: 110px;
+        bottom: 0px;
+        left: 0px;
+        height: 100%;
+        position: absolute;
+        right: 0px;
+        margin: 8px;
+    }
+    #menu {
+        display: block;
+        position: absolute;
+        cursor: pointer;
+        top: 20px;
+        right: 8px;
+        width: 32px;
+    }
+
+    #menu:focus,
+    #menu:hover {
+        outline: 0;
+        color: white;
+        background-color: #454545;
+    }
+    #page-header {
+        font-size: 16pt;
+    }
 }
