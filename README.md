@@ -28,6 +28,7 @@
 - CSS
 - <a href="https://developer.foursquare.com/">Foursquare API</a>
 - <a href="https://developers.google.com/maps/documentation/">Google Maps API</a>
+- Service Worker
 
 ### Regards,
 <a href="https://www.linkedin.com/in/soumya044">Soumya Ranjan Behera</a>
